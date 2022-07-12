@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedi Tu Prestamo</title>
+    <link rel="stylesheet" href="css/diseños.css">
+</head>
+<body>
+
+    <header>
+        <h1>Pedi tu prestamo</h1>
+    </header>
+
+    <section class="formulario">
+        <h3>Completa el formulario</h4>
+        <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su nombre">
+        <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su apellido">
+        <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su correo electronico">
+        <input class="controls" type="number" name="monto" id="monto" placeholder="Ingrese el monto del prestamo">
+        <input class="controls" type="number" name="interes" id="interes" placeholder="Ingrese la tasa de interes">
+        <input class="controls" type="number" name="tiempo" id="tiempo" placeholder="Ingrese la cantidad de cuotas deseadas">
+
+
+
+
+        <input class="condiciones" type="checkbox" name="checkbox">
+        <label for="checkbox">Acepto los terminos y condiciones del servicio</label>
+        <br>
+        <button onclick="gen_table();" type="submit" class="boton" id="calculo">Solicitar prestamo</button>
+
+        
+    </section>
+
+    <table class="tab">
+        <thead>
+            <tr>
+                <th>FECHA</th>
+                <th>CAPITAL</th>
+                <th>INTERES</th>
+                <th>IMPORTE A PAGAR</th>
+            </tr>
+        </thead>
+        <tbody id="tab">
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="ft">TOTAL</td>
+                <td id="t1"></td>
+                <td id="t2"></td>
+                <td id="t3"></td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="./js/java.js"></script>
+    <script src="./js/moment.js"></script>
+
+    
+
+</body>
+</html>
